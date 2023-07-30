@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Application1\Application1.csproj" />
+      <ProjectReference Include="..\Domain2\Domain2.csproj" />
+      <ProjectReference Include="..\Infraestrutura.Data\Infraestrutura.Data.csproj" />
+    </ItemGroup>
+
+</Project>
