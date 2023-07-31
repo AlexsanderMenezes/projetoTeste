@@ -1,4 +1,4 @@
-﻿namespace Aplication.Models.Request.Senha
+﻿namespace Application1.Models.Request.Senha
 {
     public class UsuarioAlterarSenhaRequest
     {

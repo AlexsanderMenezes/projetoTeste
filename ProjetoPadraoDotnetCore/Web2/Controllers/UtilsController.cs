@@ -1,10 +1,10 @@
 using System;
-using Aplication.Interfaces;
+using Application1.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Web.Controllers.Base;
+using Web2.Controllers.Base;
 
-namespace Web.Controllers
+namespace Web2.Controllers
 {
     [ApiController]
     [Route("[controller]")]

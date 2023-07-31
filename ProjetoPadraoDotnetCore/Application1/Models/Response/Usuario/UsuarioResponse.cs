@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Aplication.Models.Response.Usuario
+namespace Application1.Models.Response.Usuario
 {
     public class UsuarioResponse
     {

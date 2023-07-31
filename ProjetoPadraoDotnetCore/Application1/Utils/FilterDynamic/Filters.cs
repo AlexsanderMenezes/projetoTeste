@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
-using Aplication.Models.Grid;
+using Application1.Models.Grid;
 using Infraestrutura.Enum;
 
-namespace Aplication.Utils.FilterDynamic
+namespace Application1.Utils.FilterDynamic
 {
     public static class Filters
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Aplication.Utils.Objeto
+namespace Application1.Utils.Objeto
 {
     public class ValidationResult
     {

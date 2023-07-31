@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Infraestrutura.Enum;
 
-namespace Aplication.Models.Grid
+namespace Application1.Models.Grid
 {
     public class BaseGridRequest
     {

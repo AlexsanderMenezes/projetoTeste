@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Aplication.Utils.Helpers
+namespace Application1.Utils.Helpers
 {
     public static class StringHelper
     {

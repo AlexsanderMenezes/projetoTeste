@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Aplication.Utils.Email
+namespace Application1.Utils.Email
 {
      public interface IEmailHelper
      {

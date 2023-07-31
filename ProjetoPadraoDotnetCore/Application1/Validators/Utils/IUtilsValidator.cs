@@ -1,6 +1,6 @@
-﻿using ValidationResult = Aplication.Utils.Objeto.ValidationResult;
+﻿using ValidationResult = Application1.Utils.Objeto.ValidationResult;
 
-namespace Aplication.Validators.Utils
+namespace Application1.Validators.Utils
 {
     public interface IUtilsValidator
     {

@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Domain.Interfaces;
 using Domain2.Interfaces;
 using Infraestrutura.Entity;
 using Infraestrutura.Repository.Interface.SkillUsuario;
 using Infraestrutura.Repository.Interface.Usuario;
 
-namespace Domain.Services
+namespace Domain2.Services
 {
     public class UsuarioService : IUsuarioService
     {

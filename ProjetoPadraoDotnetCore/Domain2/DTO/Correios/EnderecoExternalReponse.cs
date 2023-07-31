@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Domain.DTO.Correios
+namespace Domain2.DTO.Correios
 {
     public class EnderecoExternalReponse
     {

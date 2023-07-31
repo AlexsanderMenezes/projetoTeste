@@ -1,4 +1,4 @@
-﻿namespace Aplication.Models.Response.Auth
+﻿namespace Application1.Models.Response.Auth
 {
     public class LoginResponse
     {

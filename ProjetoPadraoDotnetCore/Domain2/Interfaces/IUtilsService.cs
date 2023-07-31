@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Domain.DTO.Correios;
-using Infraestrutura.Entity;
+using Domain2.DTO.Correios;
 
-namespace Domain.Interfaces
+namespace Domain2.Interfaces
 {
      public interface IUtilsService
      {

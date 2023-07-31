@@ -1,4 +1,4 @@
-﻿namespace Aplication.Authentication
+﻿namespace Application1.Authentication
 {
     public interface IJwtTokenAuthentication
     {

@@ -1,11 +1,11 @@
-C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.csprojAssemblyReference.cache
-C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.csproj.CoreCompileInputs.cache
-C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.AssemblyInfoInputs.cache
-C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.AssemblyInfo.cs
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\bin\Debug\netcoreapp2.0\Infraestrutura.Data.deps.json
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\bin\Debug\netcoreapp2.0\Infraestrutura.Data.runtimeconfig.json
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\bin\Debug\netcoreapp2.0\Infraestrutura.Data.runtimeconfig.dev.json
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\bin\Debug\netcoreapp2.0\Infraestrutura.Data.dll
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\bin\Debug\netcoreapp2.0\Infraestrutura.Data.pdb
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.csprojAssemblyReference.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.csproj.CoreCompileInputs.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.AssemblyInfoInputs.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.AssemblyInfo.cs
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.dll
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Infraestrutura.Data\obj\Debug\netcoreapp2.0\Infraestrutura.Data.pdb

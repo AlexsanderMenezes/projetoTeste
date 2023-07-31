@@ -1,14 +1,13 @@
 using System;
 using System.Linq;
-using Aplication.Authentication;
-using Aplication.Interfaces;
-using Aplication.Models.Request.Login;
-using Aplication.Models.Request.Senha;
-using Aplication.Models.Request.Token;
+using Application1.Authentication;
 using Application1.Interfaces;
+using Application1.Models.Request.Login;
+using Application1.Models.Request.Senha;
+using Application1.Models.Request.Token;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Web.Controllers.Base;
+using Web2.Controllers.Base;
 
 namespace Web2.Controllers
 {
@@ -31,7 +30,7 @@ namespace Web2.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public JsonResult Login(LoginRequest request)
+        public JsonResult Login([FromBody]LoginRequest request)
         {
             try
             {

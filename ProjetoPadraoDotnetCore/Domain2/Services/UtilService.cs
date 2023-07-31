@@ -1,12 +1,12 @@
 ﻿using System.Net;
 using System.Threading.Tasks;
-using Domain.DTO.Correios;
-using Domain.Interfaces;
+using Domain2.DTO.Correios;
+using Domain2.Interfaces;
 using Infraestrutura.Repository.External;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace Domain.Services
+namespace Domain2.Services
 {
     public class UtilService : IUtilsService
     {

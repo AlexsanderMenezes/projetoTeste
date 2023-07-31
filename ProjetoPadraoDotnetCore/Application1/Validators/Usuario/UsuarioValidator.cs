@@ -1,8 +1,8 @@
-﻿using Aplication.Models.Request.Usuario;
-using Aplication.Utils.Objeto;
-using Aplication.Utils.ValidatorDocument;
+﻿using Application1.Models.Request.Usuario;
+using Application1.Utils.Objeto;
+using Application1.Utils.ValidatorDocument;
 
-namespace Aplication.Validators.Usuario
+namespace Application1.Validators.Usuario
 {
     public class UsuarioValidator : IUsuarioValidator
     {

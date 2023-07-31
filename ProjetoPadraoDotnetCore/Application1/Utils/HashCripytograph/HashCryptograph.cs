@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Aplication.Utils.HashCripytograph
+namespace Application1.Utils.HashCripytograph
 {
     public class HashCripytograph : IHashCriptograph
     {

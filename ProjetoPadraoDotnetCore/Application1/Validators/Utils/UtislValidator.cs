@@ -1,6 +1,6 @@
-﻿using Aplication.Utils.Objeto;
+﻿using Application1.Utils.Objeto;
 
-namespace Aplication.Validators.Utils
+namespace Application1.Validators.Utils
 {
     public class UtilsValidatior : IUtilsValidator
     {

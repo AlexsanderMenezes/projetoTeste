@@ -1,9 +1,7 @@
-﻿using Aplication.Models.Request.Login;
-using Aplication.Models.Response.Auth;
-using Aplication.Utils.Objeto;
-using Infraestrutura.Entity;
+﻿using Application1.Models.Request.Login;
+using Application1.Models.Response.Auth;
 
-namespace Aplication.Interfaces
+namespace Application1.Interfaces
 {
      public interface IAuthApp
      {

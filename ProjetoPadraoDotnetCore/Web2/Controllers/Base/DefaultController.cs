@@ -1,8 +1,8 @@
-﻿using Aplication.Models.Response.Base;
+﻿using Application1.Models.Response.Base;
 using Infraestrutura.Enum;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Web.Controllers.Base
+namespace Web2.Controllers.Base
 {
     public class DefaultController : ControllerBase
     {

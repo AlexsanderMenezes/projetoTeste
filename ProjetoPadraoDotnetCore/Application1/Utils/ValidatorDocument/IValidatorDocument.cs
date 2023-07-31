@@ -1,4 +1,4 @@
-﻿namespace Aplication.Utils.ValidatorDocument
+﻿namespace Application1.Utils.ValidatorDocument
 {
     public interface IValidatorDocument
     {

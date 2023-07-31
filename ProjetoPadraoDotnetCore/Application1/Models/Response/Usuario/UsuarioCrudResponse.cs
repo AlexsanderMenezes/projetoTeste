@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Aplication.Models.Request.Usuario;
+using Application1.Models.Request.Usuario;
 
-namespace Aplication.Models.Response.Usuario
+namespace Application1.Models.Response.Usuario
 {
     public class UsuarioCrudResponse
     {

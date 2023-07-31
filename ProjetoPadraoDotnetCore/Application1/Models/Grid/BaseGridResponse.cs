@@ -1,4 +1,4 @@
-﻿namespace Aplication.Models.Grid
+﻿namespace Application1.Models.Grid
 {
     public class BaseGridResponse
     {

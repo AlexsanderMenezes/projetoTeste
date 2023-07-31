@@ -1,11 +1,11 @@
-﻿using Aplication.Interfaces;
-using Aplication.Models.Response.Usuario;
-using Aplication.Validators.Utils;
+﻿using Application1.Interfaces;
+using Application1.Models.Response.Usuario;
+using Application1.Validators.Utils;
 using AutoMapper;
-using Domain.DTO.Correios;
-using Domain.Interfaces;
+using Domain2.DTO.Correios;
+using Domain2.Interfaces;
 
-namespace Aplication.Controllers
+namespace Application1.Controllers
 {
     public class UtilsApp : IUtilsApp
     {

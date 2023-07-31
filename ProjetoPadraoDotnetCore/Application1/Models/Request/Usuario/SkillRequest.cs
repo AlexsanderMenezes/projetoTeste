@@ -1,4 +1,4 @@
-﻿namespace Aplication.Models.Request.Usuario
+﻿namespace Application1.Models.Request.Usuario
 {
     public class SkillRequest
     {

@@ -1,6 +1,6 @@
-﻿using Aplication.Models.Grid;
+﻿using Application1.Models.Grid;
 
-namespace Aplication.Models.Request.Usuario
+namespace Application1.Models.Request.Usuario
 {
     public class UsuarioRelatorioRequest : BaseReportGridRequest
     {

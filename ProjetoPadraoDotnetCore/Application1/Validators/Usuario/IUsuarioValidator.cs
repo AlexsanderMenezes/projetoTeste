@@ -1,7 +1,7 @@
-﻿using Aplication.Models.Request.Usuario;
-using ValidationResult = Aplication.Utils.Objeto.ValidationResult;
+﻿using Application1.Models.Request.Usuario;
+using ValidationResult = Application1.Utils.Objeto.ValidationResult;
 
-namespace Aplication.Validators.Usuario
+namespace Application1.Validators.Usuario
 {
     public interface IUsuarioValidator
     {

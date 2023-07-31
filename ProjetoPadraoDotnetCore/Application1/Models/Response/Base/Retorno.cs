@@ -1,6 +1,6 @@
 ﻿using Infraestrutura.Enum;
 
-namespace Aplication.Models.Response.Base
+namespace Application1.Models.Response.Base
 {
     public class Retorno
     {

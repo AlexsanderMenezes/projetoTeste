@@ -1,6 +1,6 @@
-﻿using Aplication.Models.Response.Usuario;
+﻿using Application1.Models.Response.Usuario;
 
-namespace Aplication.Interfaces
+namespace Application1.Interfaces
 {
     public interface IUtilsApp
     {

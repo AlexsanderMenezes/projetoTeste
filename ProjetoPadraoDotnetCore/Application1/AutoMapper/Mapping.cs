@@ -1,8 +1,8 @@
-﻿using Aplication.Models.Request.Usuario;
-using Aplication.Models.Response.Usuario;
-using Aplication.Utils.HashCripytograph;
+﻿using Application1.Models.Request.Usuario;
+using Application1.Models.Response.Usuario;
+using Application1.Utils.HashCripytograph;
 using AutoMapper;
-using Domain.DTO.Correios;
+using Domain2.DTO.Correios;
 using Infraestrutura.Entity;
 
 namespace Application1.AutoMapper

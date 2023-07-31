@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Mail;
 using Microsoft.Extensions.Configuration;
 
-namespace Aplication.Utils.Email
+namespace Application1.Utils.Email
 {
     public class EmailHelper : IEmailHelper
     {

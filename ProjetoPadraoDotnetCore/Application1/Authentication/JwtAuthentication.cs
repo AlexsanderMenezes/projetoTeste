@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Aplication.Authentication
+namespace Application1.Authentication
 {
     public class JwtAuthentication : IJwtTokenAuthentication
     {

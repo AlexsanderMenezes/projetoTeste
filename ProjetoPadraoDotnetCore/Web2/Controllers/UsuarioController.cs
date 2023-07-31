@@ -1,15 +1,13 @@
 using System;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using Aplication.Interfaces;
-using Aplication.Models.Request.Usuario;
-using Aplication.Models.Response.Usuario;
 using Application1.Interfaces;
-using Infraestrutura.Entity;
+using Application1.Models.Request.Usuario;
+using Application1.Models.Response.Usuario;
 using Microsoft.AspNetCore.Authorization;
-using Web.Controllers.Base;
+using Microsoft.AspNetCore.Mvc;
+using Web2.Controllers.Base;
 
-namespace Web.Controllers
+namespace Web2.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,7 +1,7 @@
-﻿using Aplication.Models.Response.Auth;
-using Aplication.Utils.Objeto;
+﻿using Application1.Models.Response.Auth;
+using Application1.Utils.Objeto;
 
-namespace Aplication.Models.Response.Usuario
+namespace Application1.Models.Response.Usuario
 {
     public class UsuarioCadastroInicialResponse
     {

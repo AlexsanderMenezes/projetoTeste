@@ -1,7 +1,3 @@
-C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.csprojAssemblyReference.cache
-C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.csproj.CoreCompileInputs.cache
-C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.AssemblyInfoInputs.cache
-C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.AssemblyInfo.cs
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\bin\Debug\netcoreapp2.0\Domain2.deps.json
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\bin\Debug\netcoreapp2.0\Domain2.runtimeconfig.json
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\bin\Debug\netcoreapp2.0\Domain2.runtimeconfig.dev.json
@@ -9,6 +5,10 @@ C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\bin\Debug\netcoreapp2.0\D
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\bin\Debug\netcoreapp2.0\Domain2.pdb
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\bin\Debug\netcoreapp2.0\Infraestrutura.Data.dll
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\bin\Debug\netcoreapp2.0\Infraestrutura.Data.pdb
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.csprojAssemblyReference.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.csproj.CoreCompileInputs.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.AssemblyInfoInputs.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.AssemblyInfo.cs
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.csproj.CopyComplete
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.dll
 C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Domain2\obj\Debug\netcoreapp2.0\Domain2.pdb

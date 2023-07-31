@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Aplication.Models.Grid;
-using Aplication.Models.Request.Senha;
-using Aplication.Models.Request.Usuario;
-using Aplication.Models.Response.Usuario;
-using Aplication.Utils.Objeto;
+using Application1.Models.Grid;
+using Application1.Models.Request.Senha;
+using Application1.Models.Request.Usuario;
+using Application1.Models.Response.Usuario;
+using Application1.Utils.Objeto;
 using Infraestrutura.Entity;
 
 namespace Application1.Interfaces

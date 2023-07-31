@@ -1,4 +1,4 @@
-﻿namespace Aplication.Utils.HashCripytograph
+﻿namespace Application1.Utils.HashCripytograph
 {
     public interface IHashCriptograph
     {

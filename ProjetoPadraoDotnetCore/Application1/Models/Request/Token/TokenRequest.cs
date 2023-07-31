@@ -1,4 +1,4 @@
-﻿namespace Aplication.Models.Request.Token
+﻿namespace Application1.Models.Request.Token
 {
     public class TokenRequest
     {

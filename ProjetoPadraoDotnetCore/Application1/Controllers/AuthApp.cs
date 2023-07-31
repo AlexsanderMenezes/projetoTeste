@@ -1,17 +1,16 @@
 ﻿using System.Linq;
-using Aplication.Authentication;
-using Aplication.Interfaces;
-using Aplication.Models.Request.Login;
-using Aplication.Models.Response.Auth;
-using Aplication.Utils.Email;
-using Aplication.Utils.HashCripytograph;
-using Domain.Interfaces;
+using Application1.Authentication;
+using Application1.Interfaces;
+using Application1.Models.Request.Login;
+using Application1.Models.Response.Auth;
+using Application1.Utils.Email;
+using Application1.Utils.HashCripytograph;
 using Domain2.Interfaces;
 using Infraestrutura.Entity;
 using Infraestrutura.Enum;
 using Microsoft.Extensions.Configuration;
 
-namespace Aplication.Controllers
+namespace Application1.Controllers
 {
     public class AuthApp : IAuthApp
     {
