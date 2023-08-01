@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Web2.Controllers.Base
 {
-    public class DefaultController : ControllerBase
+    public class DefaultController : Controller
     {
         protected JsonResult ResponderSucesso(string mensagem, object objeto)
         {

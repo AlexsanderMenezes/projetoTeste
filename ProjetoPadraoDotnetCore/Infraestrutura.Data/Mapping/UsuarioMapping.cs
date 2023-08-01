@@ -33,11 +33,11 @@ namespace Infraestrutura.Mapping
             builder.Property(t => t.TentativasRecuperarSenha).HasColumnName("TentativasRecuperarSenha");
             builder.Property(t => t.CodigoRecuperarSenha).HasColumnName("CodigoRecuperarSenha");
 
-            builder
-                .HasOne(t => t.UsuarioFk)
-                .WithMany()
-                .HasForeignKey(t => t.IdUsuarioCadastro)
-                .IsRequired(false);
+            // builder
+            //     .HasOne(t => t.UsuarioFk)
+            //     .WithMany()
+            //     .HasForeignKey(t => t.IdUsuarioCadastro)
+            //     .IsRequired(false);
         }
     }
 }

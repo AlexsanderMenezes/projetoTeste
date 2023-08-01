@@ -15,7 +15,6 @@ using Infraestrutura.Repository.Interface.SkillUsuario;
 using Infraestrutura.Repository.Interface.Usuario;
 using Infraestrutura.Repository.ReadRepository;
 using Infraestrutura.Repository.WriteRepository;
-using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -63,7 +62,7 @@ namespace CrossCutting.IOC
 
             //Context onde instancia a conexão com o banco
             services.AddDbContext<Context>(o => 
-                o.UseSqlServer(configuration["ConnectionStrings:DefaultConnection"]), ServiceLifetime.Transient);
+                o.UseSqlServer(@"Data Source=DESKTOP-0M0JUPL\SQLSA;Initial Catalog=ProjetoPadraoDotnet;User Id=sa;Password=megawere;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"), ServiceLifetime.Transient);
             
         }
     }

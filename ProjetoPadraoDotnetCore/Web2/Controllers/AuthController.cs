@@ -12,7 +12,6 @@ using Web2.Controllers.Base;
 namespace Web2.Controllers
 {
 
-    [ApiController]
     [Route("[controller]")]
     public class AuthController : DefaultController
     {
@@ -27,9 +26,8 @@ namespace Web2.Controllers
             Token = token;
             UsuarioApp = usuarioApp;
         }
-
-        [HttpPost]
-        [Route("Login")]
+        
+        [HttpPost("Login")]
         public JsonResult Login([FromBody]LoginRequest request)
         {
             try
@@ -47,8 +45,7 @@ namespace Web2.Controllers
             }
         }
 
-        [HttpPost]
-        [Route("GerarToken")]
+        [HttpPost("GerarToken")]
         public JsonResult GerarToken(TokenRequest request)
         {
             try
