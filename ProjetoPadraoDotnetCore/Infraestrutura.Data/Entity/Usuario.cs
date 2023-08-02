@@ -33,7 +33,7 @@ namespace Infraestrutura.Entity
         #region Relacionamento
 
         //public virtual IEnumerable<SkillUsuario> LSkillUsuarios { get; set; } = null;
-        public virtual Usuario UsuarioFk { get; set; } = null;
+        //public virtual Usuario UsuarioFk { get; set; } = null;
 
         #endregion
     }
