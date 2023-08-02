@@ -53,9 +53,9 @@ namespace Application1.Controllers
             return Service.GetAllQuery().FirstOrDefault(x => x.Email == email && x.Cpf == cpf);
         }
 
-        public UsuarioCrudResponse GetById(int id)
+        public Usuario GetById(int id)
         {
-            return Mapper.Map<Usuario, UsuarioCrudResponse>(Service.GetByIdWithInclude(id));
+            return Service.GetByIdWithInclude(id);
         }
 
         public ValidationResult Cadastrar(UsuarioRequest request)
@@ -68,7 +68,8 @@ namespace Application1.Controllers
 
             if (validation.IsValid())
             {
-                var usuario = Mapper.Map<UsuarioRequest, Usuario>(request);
+
+                var usuario = Mapper.Map<Usuario>(request);
 
                 //Hash da senha
                 usuario.Senha = new HashCripytograph().Hash(request.Senha);

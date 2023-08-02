@@ -18,9 +18,7 @@ namespace Infraestrutura.Repository.ReadRepository
 
         public Usuario GetByIdWithInclude(int id)
         {
-            return _context.Usuario
-                       .Include(x => x.LSkillUsuarios)
-                       .FirstOrDefault(x => x.IdUsuario == id) ??
+            return _context.Usuario.FirstOrDefault(x => x.IdUsuario == id) ??
                    throw new InvalidOperationException($"Usuário com Id {id} não encontrado!");
         }
 

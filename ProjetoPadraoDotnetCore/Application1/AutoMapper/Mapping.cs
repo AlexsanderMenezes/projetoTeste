@@ -18,6 +18,8 @@ namespace Application1.AutoMapper
                     map => map.MapFrom(src => src.Descricao))
                 .ReverseMap();
 
+            CreateMap<Usuario, UsuarioRequest>();
+
             CreateMap<UsuarioRequest, Usuario>();
             
             CreateMap<Usuario, UsuarioCrudResponse>()

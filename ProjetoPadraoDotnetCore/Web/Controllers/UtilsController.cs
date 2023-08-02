@@ -18,7 +18,6 @@ namespace teste.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         [Route("ConsultarEnderecoCep/{cep}")]
         public JsonResult ConsultarEnderecoCep(string cep)
         {

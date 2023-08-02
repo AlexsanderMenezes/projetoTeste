@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Infraestrutura.Entity;
 using Infraestrutura.Enum;
 
 namespace Application1.Models.Request.Usuario
@@ -27,13 +28,16 @@ namespace Application1.Models.Request.Usuario
         public DateTime? DataNascimento { get; set; }
         public EGenero Genero { get; set; }
         public List<SkillRequest> lSkills { get; set; }
+        
+        //
+        public int? IdUsuarioCadastro { get; set; }
+        public int? CodigoRecuperarSenha { get; set; }
+        public int? TentativasRecuperarSenha { get; set; }
+        public DateTime? DataRecuperacaoSenha { get; set; }
+        
+        public virtual IEnumerable<SkillUsuario> LSkillUsuarios { get; set; } = null;
+        public virtual Infraestrutura.Entity.Usuario UsuarioFk { get; set; } = null;
     }
 
 
-    public class Carro
-    {
-        public string roda { get; set; } = null;
-        public string gasolina { get; set; } = null;
-
-    }
 }

@@ -13,11 +13,11 @@ namespace Infraestrutura.Mapping
             builder.HasKey(o => o.IdSkill);
             builder.Property(t => t.Descricao).HasColumnName("Descricao").IsRequired();
 
-            builder
-                .HasOne(p => p.Usuario)
-                .WithMany(b => b.LSkillUsuarios)
-                .HasForeignKey(p => p.IdUsuario)
-                .IsRequired();
+            // builder
+            //     .HasOne(p => p.Usuario)
+            //     .WithMany(b => b.LSkillUsuarios)
+            //     .HasForeignKey(p => p.IdUsuario)
+            //     .IsRequired();
         }
     }
 }

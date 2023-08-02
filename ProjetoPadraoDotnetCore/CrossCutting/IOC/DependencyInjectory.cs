@@ -23,6 +23,7 @@ namespace CrossCutting.IOC
 {
     public static class DependencyInjectory
     {
+        
         public static void Injectory(this IServiceCollection services, IServiceCollection serviceCollection,
             IConfiguration configuration)
         {
@@ -63,6 +64,7 @@ namespace CrossCutting.IOC
             //Context onde instancia a conexão com o banco
             services.AddDbContext<Context>(o => 
                 o.UseSqlServer(@"Data Source=DESKTOP-0M0JUPL\SQLSA;Initial Catalog=ProjetoPadraoDotnet;User Id=sa;Password=megawere;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"), ServiceLifetime.Transient);
+                // o.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             
         }
     }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Infraestrutura.Entity;
 using Infraestrutura.Enum;
 
 namespace Infraestrutura.Entity
@@ -35,7 +32,7 @@ namespace Infraestrutura.Entity
 
         #region Relacionamento
 
-        public virtual IEnumerable<SkillUsuario> LSkillUsuarios { get; set; } = null;
+        //public virtual IEnumerable<SkillUsuario> LSkillUsuarios { get; set; } = null;
         public virtual Usuario UsuarioFk { get; set; } = null;
 
         #endregion

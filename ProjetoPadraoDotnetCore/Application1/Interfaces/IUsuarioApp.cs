@@ -13,7 +13,7 @@ namespace Application1.Interfaces
          List<Usuario> GetAll();
          Usuario GetByCpf(string cpf);
          Usuario GetByCpfEmail(string cpf, string email);
-         UsuarioCrudResponse GetById(int id);
+         Usuario GetById(int id);
          ValidationResult Cadastrar(UsuarioRequest request);
          ValidationResult Editar(UsuarioRequest request);
          void DeleteById(int id);

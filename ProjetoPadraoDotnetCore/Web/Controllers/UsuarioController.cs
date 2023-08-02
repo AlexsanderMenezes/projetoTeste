@@ -3,7 +3,6 @@ using System.Linq;
 using Application1.Interfaces;
 using Application1.Models.Request.Usuario;
 using Application1.Models.Response.Usuario;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using teste.Controllers.Base;
 
@@ -21,7 +20,6 @@ namespace teste.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         [Route("Cadastrar")]
         public JsonResult Cadastrar(UsuarioRequest request)
         {
@@ -43,7 +41,6 @@ namespace teste.Controllers
 
 
         [HttpGet]
-        [Authorize]
         [Route("ConsultarTodos")]
         public JsonResult ConsultarTodos()
         {
@@ -63,7 +60,6 @@ namespace teste.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         [Route("ConsultarViaId/{id}")]
         public JsonResult ConsultarViaId(int id)
         {
@@ -79,7 +75,6 @@ namespace teste.Controllers
 
 
         [HttpPost]
-        [Authorize]
         [Route("Editar")]
         public JsonResult Editar(UsuarioRequest request)
         {
@@ -99,7 +94,6 @@ namespace teste.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         [Route("DeleteById")]
         public JsonResult DeleteById(int id)
         {
@@ -115,7 +109,6 @@ namespace teste.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         [Route("ConsultarGridUsuario")]
         public JsonResult ConsultarGridUsuario(UsuarioGridRequest request)
         {
@@ -127,7 +120,7 @@ namespace teste.Controllers
             }
             catch (Exception e)
             {
-                return ResponderErro(e.Message);
+                return ResponderErro("Implementação futura + front");
             }
         }
 
