@@ -27,7 +27,7 @@ namespace Application1.Models.Request.Usuario
         public string Telefone { get; set; } = null;
         public DateTime? DataNascimento { get; set; }
         public EGenero Genero { get; set; }
-        public List<SkillRequest> lSkills { get; set; }
+        //public List<SkillRequest> lSkills { get; set; }
         
         //
         public int? IdUsuarioCadastro { get; set; }
@@ -35,8 +35,8 @@ namespace Application1.Models.Request.Usuario
         public int? TentativasRecuperarSenha { get; set; }
         public DateTime? DataRecuperacaoSenha { get; set; }
         
-        public virtual IEnumerable<SkillUsuario> LSkillUsuarios { get; set; } = null;
-        public virtual Infraestrutura.Entity.Usuario UsuarioFk { get; set; } = null;
+        //public virtual IEnumerable<SkillUsuario> LSkillUsuarios { get; set; } = null;
+        //public virtual Infraestrutura.Entity.Usuario UsuarioFk { get; set; } = null;
     }
 
 
