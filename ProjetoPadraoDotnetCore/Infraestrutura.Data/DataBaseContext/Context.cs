@@ -1,17 +1,14 @@
 ﻿using System.Reflection;
 using Infraestrutura.Entity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace Infraestrutura.DataBaseContext
 {
     public class Context : DbContext
     {
-        private readonly string _connectionString;
         // option passado na DependcyInjectory no build da apresentation 
-        public Context(DbContextOptions<Context> options, IConfiguration configuration) : base(options)
+        public Context(DbContextOptions<Context> options) : base(options)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
