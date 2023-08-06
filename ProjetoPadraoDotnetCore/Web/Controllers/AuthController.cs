@@ -66,7 +66,7 @@ namespace teste.Controllers
         }
 
         [HttpPost]
-        //[Authorize]
+        [Authorize]
         [Route("AlterarSenha")]
         public JsonResult AlterarSenha(UsuarioAlterarSenhaRequest request)
         {

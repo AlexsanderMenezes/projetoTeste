@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using Application1.AutoMapper;
 using AutoMapper;
@@ -19,10 +20,14 @@ namespace teste
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory()) // requires Microsoft.Extensions.Configuration.Json
+                .AddJsonFile("appsettings.json") // requires Microsoft.Extensions.Configuration.Json
+                .AddEnvironmentVariables(); // requires Microsoft.Extensions.Configuration.EnvironmentVariables
+            Configuration = builder.Build();
         }
 
-        public IConfiguration Configuration { get; }
+        protected IConfiguration Configuration { set; get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -30,14 +35,12 @@ namespace teste
             //gambs do swagger ???
             services.AddMvcCore().AddApiExplorer();
             services.AddMvc();
-        
+
             //instancia autoMapper
             services.AddAutoMapper(typeof(Mapping));
         
             services.Injectory(services, Configuration);
-
-
-
+            
             // Registrar o gerador do Swagger, definindo um ou mais documentos Swagger
             services.AddSwaggerGen(c =>
             {
@@ -77,10 +80,7 @@ namespace teste
                     }
                 });
             });
-            
-            
 
-        
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ProjetoPadraoDotnet"));
             services.AddAuthentication(authOptions =>
             {
@@ -89,6 +89,8 @@ namespace teste
             }).AddJwtBearer("Bearer", options =>
             {
                 //paramns para utilização do token
+                options.Audience = "8d708afe-2966-40b7-918c-a39551625958";
+                options.Authority = "https://login.microsoftonline.com/a1d50521-9687-4e4d-a76d-ddd53ab0c668/";
                 options.RequireHttpsMetadata = false;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {

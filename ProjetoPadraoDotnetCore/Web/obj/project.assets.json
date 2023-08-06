@@ -14018,6 +14018,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 4.0.1",
       "CrossCutting >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.9",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.0.4",
       "Microsoft.NETCore.App >= 2.0.0",
       "Swashbuckle.AspNetCore >= 5.0.0"
     ]
@@ -14077,6 +14078,10 @@
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.9, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[2.0.4, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
