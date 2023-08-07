@@ -41,6 +41,24 @@ namespace teste
         
             services.Injectory(services, Configuration);
             
+            var tokenKey = "ProjetoPadraoDotnet"; // Troque pela sua chave secreta
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey));
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = "seu_issuer",
+                        ValidAudience = "seu_audience",
+                        IssuerSigningKey = key
+                    };
+                });
+
+            
             // Registrar o gerador do Swagger, definindo um ou mais documentos Swagger
             services.AddSwaggerGen(c =>
             {
@@ -51,17 +69,26 @@ namespace teste
                     Description = "Aplicação Projeto Padrão"
                 });
                 // autenticação do JWT 
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                // Definir o esquema de segurança Bearer Token
+                var securityScheme = new OpenApiSecurityScheme
                 {
-                    Description =
-                        "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
                     Name = "Authorization",
+                    Description = "JWT Authorization header using the Bearer scheme.",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "bearer",
+                    BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = "Bearer"
-                });
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                };
 
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                c.AddSecurityDefinition("Bearer", securityScheme);
+
+                // Adicionar a exigência de autenticação globalmente para todas as operações
+                var securityRequirement = new OpenApiSecurityRequirement
                 {
                     {
                         new OpenApiSecurityScheme
@@ -70,37 +97,64 @@ namespace teste
                             {
                                 Type = ReferenceType.SecurityScheme,
                                 Id = "Bearer"
-                            },
-                            Scheme = "oauth2",
-                            Name = "Bearer",
-                            In = ParameterLocation.Header,
-
+                            }
                         },
                         new List<string>()
                     }
-                });
-            });
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ProjetoPadraoDotnet"));
-            services.AddAuthentication(authOptions =>
-            {
-                authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer("Bearer", options =>
-            {
-                //paramns para utilização do token
-                options.Audience = "8d708afe-2966-40b7-918c-a39551625958";
-                options.Authority = "https://login.microsoftonline.com/a1d50521-9687-4e4d-a76d-ddd53ab0c668/";
-                options.RequireHttpsMetadata = false;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    ValidateLifetime = true,
-                    IssuerSigningKey = key,
-                    ValidateAudience = false,
-                    ValidateIssuer = false
                 };
-            });
+
+                c.AddSecurityRequirement(securityRequirement); 
+                
+            //     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            //     {
+            //         Description =
+            //             "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
+            //         Name = "Authorization",
+            //         In = ParameterLocation.Header,
+            //         Type = SecuritySchemeType.ApiKey,
+            //         Scheme = "Bearer"
+            //     });
+            //
+            //     c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+            //     {
+            //         {
+            //             new OpenApiSecurityScheme
+            //             {
+            //                 Reference = new OpenApiReference
+            //                 {
+            //                     Type = ReferenceType.SecurityScheme,
+            //                     Id = "Bearer"
+            //                 },
+            //                 Scheme = "oauth2",
+            //                 Name = "Bearer",
+            //                 In = ParameterLocation.Header,
+            //
+            //             },
+            //             new List<string>()
+            //         }
+            //     });
+            // });
+            //
+            // var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ProjetoPadraoDotnet"));
+            // services.AddAuthentication(authOptions =>
+            // {
+            //     authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //     authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            // }).AddJwtBearer("Bearer", options =>
+            // {
+            //     //paramns para utilização do token
+            //     options.Audience = "8d708afe-2966-40b7-918c-a39551625958";
+            //     options.Authority = "https://login.microsoftonline.com/a1d50521-9687-4e4d-a76d-ddd53ab0c668/";
+            //     options.RequireHttpsMetadata = false;
+            //     options.TokenValidationParameters = new TokenValidationParameters
+            //     {
+            //         ValidateIssuerSigningKey = true,
+            //         ValidateLifetime = true,
+            //         IssuerSigningKey = key,
+            //         ValidateAudience = false,
+            //         ValidateIssuer = false
+            //     };
+             });
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -108,6 +162,16 @@ namespace teste
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            
+            app.UseAuthentication();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API WEB");
+            });
+
             
             app.UsePathBase("/ProjetoPadraoDotnetCore/Web2");
             
@@ -119,15 +183,6 @@ namespace teste
                 );
             });
         
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API WEB");
-            });
-        
-            app.UseAuthentication();
-
-
             app.Run(async (context) => { await context.Response.WriteAsync("Hello World!"); });
         }
     }
