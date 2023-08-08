@@ -52,11 +52,13 @@ namespace teste
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = "seu_issuer",
-                        ValidAudience = "seu_audience",
+                        ValidIssuer = "http://localhost:5000/",
+                        ValidAudience = "https://login.microsoftonline.com/a1d50521-9687-4e4d-a76d-ddd53ab0c668/",
                         IssuerSigningKey = key
                     };
                 });
+            
+           
 
             
             // Registrar o gerador do Swagger, definindo um ou mais documentos Swagger
@@ -163,15 +165,15 @@ namespace teste
                 app.UseDeveloperExceptionPage();
             }
             
-            
+            // Middleware da autenticação JWT
             app.UseAuthentication();
-
+            
+            // Middleware do Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API WEB");
             });
-
             
             app.UsePathBase("/ProjetoPadraoDotnetCore/Web2");
             

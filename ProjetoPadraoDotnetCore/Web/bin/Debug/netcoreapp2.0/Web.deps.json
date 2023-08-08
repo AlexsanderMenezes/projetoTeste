@@ -27,6 +27,7 @@
           "CrossCutting": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.9",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.4",
+          "Microsoft.AspNetCore.Cors": "2.1.0",
           "Microsoft.NETCore.App": "2.0.0",
           "Swashbuckle.AspNetCore": "5.0.0"
         },
