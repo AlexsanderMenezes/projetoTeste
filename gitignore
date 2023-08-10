@@ -14,6 +14,8 @@ mono_crash.mem.*.blob
 *.userosscache
 *.sln.docstates
 appsettings.Local.json
+.dll
+bin\
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -350,3 +352,4 @@ bower_components
 
 .idea
 /bbc/src/Front/.idea
+/bin/Debug/netcoreapp2.0

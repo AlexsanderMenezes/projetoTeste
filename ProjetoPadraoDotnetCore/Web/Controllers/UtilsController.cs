@@ -25,7 +25,7 @@ namespace teste.Controllers
             {
                 var retorno = UtilsApp.ConsultarEnderecoCep(cep);
 
-                if (!retorno.IsValid())
+                if (!retorno.StatusApi)
                     return ResponderErro("Cep inválido!");
 
                 return ResponderSucesso(retorno);

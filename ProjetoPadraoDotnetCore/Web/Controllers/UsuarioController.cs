@@ -21,6 +21,7 @@ namespace teste.Controllers
         }
 
         [HttpPost]
+        //implementar futuro primeiro cadastro
         [Route("Cadastrar")]
         public JsonResult Cadastrar(UsuarioRequest request)
         {
@@ -42,6 +43,7 @@ namespace teste.Controllers
 
 
         [HttpGet]
+        [Authorize]
         [Route("ConsultarTodos")]
         public JsonResult ConsultarTodos()
         {
@@ -76,7 +78,8 @@ namespace teste.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost]        
+        [Authorize]
         [Route("Editar")]
         public JsonResult Editar(UsuarioRequest request)
         {
@@ -96,6 +99,7 @@ namespace teste.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [Route("DeleteById")]
         public JsonResult DeleteById(int id)
         {
@@ -111,6 +115,7 @@ namespace teste.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [Route("ConsultarGridUsuario")]
         public JsonResult ConsultarGridUsuario(UsuarioGridRequest request)
         {

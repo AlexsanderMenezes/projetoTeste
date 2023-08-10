@@ -4906,23 +4906,23 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "Application1/1.0.0": {
+      "Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "AutoMapper": "4.2.1",
-          "Domain2": "1.0.0",
+          "Domain": "1.0.0",
           "Infraestrutura.Data": "1.0.0",
           "System.Linq.Dynamic.Core": "1.2.20"
         },
         "compile": {
-          "bin/placeholder/Application1.dll": {}
+          "bin/placeholder/Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Application1.dll": {}
+          "bin/placeholder/Application.dll": {}
         }
       },
-      "Domain2/1.0.0": {
+      "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
@@ -4930,10 +4930,10 @@
           "Microsoft.AspNetCore.All": "2.0.9"
         },
         "compile": {
-          "bin/placeholder/Domain2.dll": {}
+          "bin/placeholder/Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain2.dll": {}
+          "bin/placeholder/Domain.dll": {}
         }
       },
       "Infraestrutura.Data/1.0.0": {
@@ -13624,15 +13624,15 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "Application1/1.0.0": {
+    "Application/1.0.0": {
       "type": "project",
-      "path": "../Application1/Application1.csproj",
-      "msbuildProject": "../Application1/Application1.csproj"
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
     },
-    "Domain2/1.0.0": {
+    "Domain/1.0.0": {
       "type": "project",
-      "path": "../Domain2/Domain2.csproj",
-      "msbuildProject": "../Domain2/Domain2.csproj"
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     },
     "Infraestrutura.Data/1.0.0": {
       "type": "project",
@@ -13642,8 +13642,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Application1 >= 1.0.0",
-      "Domain2 >= 1.0.0",
+      "Application >= 1.0.0",
+      "Domain >= 1.0.0",
       "Infraestrutura.Data >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.9",
       "Microsoft.NETCore.App >= 2.0.0"
@@ -13682,11 +13682,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Application1\\Application1.csproj": {
-              "projectPath": "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Application1\\Application1.csproj"
+            "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Application\\Application.csproj": {
+              "projectPath": "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Application\\Application.csproj"
             },
-            "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Domain2\\Domain2.csproj": {
-              "projectPath": "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Domain2\\Domain2.csproj"
+            "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Domain\\Domain.csproj"
             },
             "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Infraestrutura.Data\\Infraestrutura.Data.csproj": {
               "projectPath": "C:\\Source\\projetoTeste\\ProjetoPadraoDotnetCore\\Infraestrutura.Data\\Infraestrutura.Data.csproj"

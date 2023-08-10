@@ -25,7 +25,6 @@ namespace Infraestrutura.Entity
         public string Observacao { get; set; }
         public DateTime? DataNascimento { get; set; }
         public EGenero Genero { get; set; }
-        public int? IdUsuarioCadastro { get; set; }
         public int? CodigoRecuperarSenha { get; set; }
         public int? TentativasRecuperarSenha { get; set; }
         public DateTime? DataRecuperacaoSenha { get; set; }

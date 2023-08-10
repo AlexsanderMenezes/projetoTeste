@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCuttin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{7D58FB55-9383-41F3-873E-3DB12D4288A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain2", "Domain2\Domain2.csproj", "{DEABCF5E-8B57-496E-809F-99AEF745C89A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{DEABCF5E-8B57-496E-809F-99AEF745C89A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application1", "Application1\Application1.csproj", "{43E09421-43C8-4EFE-81F6-484FCAA97A65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{43E09421-43C8-4EFE-81F6-484FCAA97A65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{669DB086-6723-4F0E-A629-5D2923FD2B9D}"
 EndProject

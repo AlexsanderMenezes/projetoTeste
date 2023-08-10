@@ -5024,28 +5024,28 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "Application1/1.0.0": {
+      "Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
           "AutoMapper": "4.2.1",
-          "Domain2": "1.0.0",
+          "Domain": "1.0.0",
           "Infraestrutura.Data": "1.0.0",
           "System.Linq.Dynamic.Core": "1.2.20"
         },
         "compile": {
-          "bin/placeholder/Application1.dll": {}
+          "bin/placeholder/Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Application1.dll": {}
+          "bin/placeholder/Application.dll": {}
         }
       },
       "CrossCutting/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "Application1": "1.0.0",
-          "Domain2": "1.0.0",
+          "Application": "1.0.0",
+          "Domain": "1.0.0",
           "Infraestrutura.Data": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.9"
         },
@@ -5056,7 +5056,7 @@
           "bin/placeholder/CrossCutting.dll": {}
         }
       },
-      "Domain2/1.0.0": {
+      "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
@@ -5064,10 +5064,10 @@
           "Microsoft.AspNetCore.All": "2.0.9"
         },
         "compile": {
-          "bin/placeholder/Domain2.dll": {}
+          "bin/placeholder/Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain2.dll": {}
+          "bin/placeholder/Domain.dll": {}
         }
       },
       "Infraestrutura.Data/1.0.0": {
@@ -13992,20 +13992,20 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "Application1/1.0.0": {
+    "Application/1.0.0": {
       "type": "project",
-      "path": "../Application1/Application1.csproj",
-      "msbuildProject": "../Application1/Application1.csproj"
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
     },
     "CrossCutting/1.0.0": {
       "type": "project",
       "path": "../CrossCutting/CrossCutting.csproj",
       "msbuildProject": "../CrossCutting/CrossCutting.csproj"
     },
-    "Domain2/1.0.0": {
+    "Domain/1.0.0": {
       "type": "project",
-      "path": "../Domain2/Domain2.csproj",
-      "msbuildProject": "../Domain2/Domain2.csproj"
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     },
     "Infraestrutura.Data/1.0.0": {
       "type": "project",
@@ -14018,7 +14018,6 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 4.0.1",
       "CrossCutting >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.9",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.0.4",
       "Microsoft.AspNetCore.Cors >= 2.1.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "Swashbuckle.AspNetCore >= 5.0.0"
@@ -14079,10 +14078,6 @@
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.9, )"
-          },
-          "Microsoft.AspNetCore.Authentication.JwtBearer": {
-            "target": "Package",
-            "version": "[2.0.4, )"
           },
           "Microsoft.AspNetCore.Cors": {
             "target": "Package",

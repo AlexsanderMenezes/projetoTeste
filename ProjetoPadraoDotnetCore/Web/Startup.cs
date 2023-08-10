@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.IO;
 using System.Text;
-using Application1.AutoMapper;
+using Application.AutoMapper;
 using AutoMapper;
 using CrossCutting.IOC;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -41,122 +41,47 @@ namespace teste
         
             services.Injectory(services, Configuration);
             
-            var tokenKey = "ProjetoPadraoDotnet"; // Troque pela sua chave secreta
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey));
-
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateIssuerSigningKey = true,
-                        ValidIssuer = "http://localhost:5000/",
-                        ValidAudience = "https://login.microsoftonline.com/a1d50521-9687-4e4d-a76d-ddd53ab0c668/",
-                        IssuerSigningKey = key
-                    };
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Logging:TokenConfigurations:Key"])),
+                    ClockSkew = TimeSpan.Zero
                 });
-            
-           
 
-            
+
             // Registrar o gerador do Swagger, definindo um ou mais documentos Swagger
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "Projeto Padrão",
-                    Version = "v1",
-                    Description = "Aplicação Projeto Padrão"
-                });
-                // autenticação do JWT 
-                // Definir o esquema de segurança Bearer Token
-                var securityScheme = new OpenApiSecurityScheme
-                {
-                    Name = "Authorization",
-                    Description = "JWT Authorization header using the Bearer scheme.",
-                    Type = SecuritySchemeType.Http,
-                    Scheme = "bearer",
-                    BearerFormat = "JWT",
-                    In = ParameterLocation.Header,
-                    Reference = new OpenApiReference
-                    {
-                        Type = ReferenceType.SecurityScheme,
-                        Id = "Bearer"
-                    }
-                };
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Web Api", Version = "v1" });
 
-                c.AddSecurityDefinition("Bearer", securityScheme);
-
-                // Adicionar a exigência de autenticação globalmente para todas as operações
-                var securityRequirement = new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            }
-                        },
-                        new List<string>()
-                    }
-                };
-
-                c.AddSecurityRequirement(securityRequirement); 
-                
-            //     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-            //     {
-            //         Description =
-            //             "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
-            //         Name = "Authorization",
-            //         In = ParameterLocation.Header,
-            //         Type = SecuritySchemeType.ApiKey,
-            //         Scheme = "Bearer"
-            //     });
-            //
-            //     c.AddSecurityRequirement(new OpenApiSecurityRequirement()
-            //     {
-            //         {
-            //             new OpenApiSecurityScheme
-            //             {
-            //                 Reference = new OpenApiReference
-            //                 {
-            //                     Type = ReferenceType.SecurityScheme,
-            //                     Id = "Bearer"
-            //                 },
-            //                 Scheme = "oauth2",
-            //                 Name = "Bearer",
-            //                 In = ParameterLocation.Header,
-            //
-            //             },
-            //             new List<string>()
-            //         }
-            //     });
-            // });
-            //
-            // var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ProjetoPadraoDotnet"));
-            // services.AddAuthentication(authOptions =>
-            // {
-            //     authOptions.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            //     authOptions.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            // }).AddJwtBearer("Bearer", options =>
-            // {
-            //     //paramns para utilização do token
-            //     options.Audience = "8d708afe-2966-40b7-918c-a39551625958";
-            //     options.Authority = "https://login.microsoftonline.com/a1d50521-9687-4e4d-a76d-ddd53ab0c668/";
-            //     options.RequireHttpsMetadata = false;
-            //     options.TokenValidationParameters = new TokenValidationParameters
-            //     {
-            //         ValidateIssuerSigningKey = true,
-            //         ValidateLifetime = true,
-            //         IssuerSigningKey = key,
-            //         ValidateAudience = false,
-            //         ValidateIssuer = false
-            //     };
-             });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme() 
+                { 
+                    Name = "Authorization", 
+                    Type = SecuritySchemeType.ApiKey, 
+                    Scheme = "Bearer", 
+                    BearerFormat = "JWT", 
+                    In = ParameterLocation.Header, 
+                    Description = "JWT Authorization header using the Bearer scheme.", 
+                }); 
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement 
+                { 
+                    { 
+                        new OpenApiSecurityScheme 
+                        { 
+                            Reference = new OpenApiReference 
+                            { 
+                                Type = ReferenceType.SecurityScheme, 
+                                Id = "Bearer" 
+                            } 
+                        }, 
+                        new string[] {} 
+                    } 
+                }); 
+            });
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -184,6 +109,7 @@ namespace teste
                     "ProjetoPadraoDotnetCore/Web/{controller}/{action}/{id}"
                 );
             });
+            
         
             app.Run(async (context) => { await context.Response.WriteAsync("Hello World!"); });
         }

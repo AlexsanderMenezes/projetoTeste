@@ -9,8 +9,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Application1\Application1.csproj" />
-      <ProjectReference Include="..\Domain2\Domain2.csproj" />
+      <ProjectReference Include="..\Application\Application.csproj" />
+      <ProjectReference Include="..\Domain\Domain.csproj" />
       <ProjectReference Include="..\Infraestrutura.Data\Infraestrutura.Data.csproj" />
     </ItemGroup>
 
