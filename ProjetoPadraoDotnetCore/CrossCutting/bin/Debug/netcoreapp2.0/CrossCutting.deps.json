@@ -23,8 +23,8 @@
     ".NETCoreApp,Version=v2.0": {
       "CrossCutting/1.0.0": {
         "dependencies": {
-          "Application1": "1.0.0",
-          "Domain2": "1.0.0",
+          "Application": "1.0.0",
+          "Domain": "1.0.0",
           "Infraestrutura.Data": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.9",
           "Microsoft.NETCore.App": "2.0.0"
@@ -3967,30 +3967,30 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "Application1/1.0.0": {
+      "Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "4.2.1",
-          "Domain2": "1.0.0",
+          "Domain": "1.0.0",
           "Infraestrutura.Data": "1.0.0",
           "System.Linq.Dynamic.Core": "1.2.20"
         },
         "runtime": {
-          "Application1.dll": {}
+          "Application.dll": {}
         },
         "compile": {
-          "Application1.dll": {}
+          "Application.dll": {}
         }
       },
-      "Domain2/1.0.0": {
+      "Domain/1.0.0": {
         "dependencies": {
           "Infraestrutura.Data": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.9"
         },
         "runtime": {
-          "Domain2.dll": {}
+          "Domain.dll": {}
         },
         "compile": {
-          "Domain2.dll": {}
+          "Domain.dll": {}
         }
       },
       "Infraestrutura.Data/1.0.0": {
@@ -6261,12 +6261,12 @@
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
-    "Application1/1.0.0": {
+    "Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Domain2/1.0.0": {
+    "Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

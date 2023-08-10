@@ -1,0 +1,16 @@
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Application.deps.json
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Application.runtimeconfig.json
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Application.runtimeconfig.dev.json
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Application.dll
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Application.pdb
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Domain.dll
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Infraestrutura.Data.dll
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Domain.pdb
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\bin\Debug\netcoreapp2.0\Infraestrutura.Data.pdb
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\obj\Debug\netcoreapp2.0\Application.csprojAssemblyReference.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\obj\Debug\netcoreapp2.0\Application.csproj.CoreCompileInputs.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\obj\Debug\netcoreapp2.0\Application.AssemblyInfoInputs.cache
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\obj\Debug\netcoreapp2.0\Application.AssemblyInfo.cs
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\obj\Debug\netcoreapp2.0\Application.csproj.CopyComplete
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\obj\Debug\netcoreapp2.0\Application.dll
+C:\Source\projetoTeste\ProjetoPadraoDotnetCore\Application\obj\Debug\netcoreapp2.0\Application.pdb

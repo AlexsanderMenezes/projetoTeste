@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
-using Application1.Authentication;
-using Application1.Interfaces;
-using Application1.Models.Request.Login;
-using Application1.Models.Request.Senha;
-using Application1.Models.Request.Token;
+using Application.Authentication;
+using Application.Interfaces;
+using Application.Models.Request.Login;
+using Application.Models.Request.Senha;
+using Application.Models.Request.Token;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using teste.Controllers.Base;

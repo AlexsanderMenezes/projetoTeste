@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
-using Application1.Interfaces;
-using Application1.Models.Request.Usuario;
-using Application1.Models.Response.Usuario;
+using Application.Interfaces;
+using Application.Models.Request.Usuario;
+using Application.Models.Response.Usuario;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using teste.Controllers.Base;

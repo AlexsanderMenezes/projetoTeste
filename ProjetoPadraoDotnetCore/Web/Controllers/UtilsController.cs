@@ -1,5 +1,5 @@
 using System;
-using Application1.Interfaces;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using teste.Controllers.Base;
