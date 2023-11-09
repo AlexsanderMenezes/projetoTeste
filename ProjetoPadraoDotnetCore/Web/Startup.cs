@@ -90,6 +90,14 @@ namespace teste
                 app.UseDeveloperExceptionPage();
             }
             
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithExposedHeaders("*")
+                .WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials()
+            );
+            
             // Middleware da autenticação JWT
             app.UseAuthentication();
             
