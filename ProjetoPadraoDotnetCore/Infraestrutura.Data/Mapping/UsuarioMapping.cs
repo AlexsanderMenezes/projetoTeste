@@ -22,7 +22,6 @@ namespace Infraestrutura.Mapping
             builder.Property(t => t.Cep).HasColumnName("Cep");
             builder.Property(t => t.Estado).HasColumnName("Estado");
             builder.Property(t => t.Bairro).HasColumnName("Cidade");
-            builder.Property(t => t.Pais).HasColumnName("Pais");
             builder.Property(t => t.Rua).HasColumnName("Rua");
             builder.Property(t => t.Numero).HasColumnName("Numero");
 
