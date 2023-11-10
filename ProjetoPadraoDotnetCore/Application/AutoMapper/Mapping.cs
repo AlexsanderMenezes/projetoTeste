@@ -26,8 +26,6 @@ namespace Application.AutoMapper
                 .ForMember(dst => dst.DataNascimento,
                     map => map.MapFrom(src => src.DataNascimento.Value.ToString("MM/dd/yyyy")))
                 
-                .ForMember(dst => dst.Genero,
-                    map => map.MapFrom(src => src.Genero.GetHashCode().ToString()))
                 .ForMember(dst => dst.Senha,
                     map => map.MapFrom(src => string.Empty));
 

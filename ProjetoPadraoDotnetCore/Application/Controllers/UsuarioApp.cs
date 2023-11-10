@@ -79,6 +79,28 @@ namespace Application.Controllers
 
             return validation;
         }
+        
+        public ValidationResult CadastroInicial(UsuarioRegistroInicialRequest request)
+        {
+            var validation = Validation.ValidacaoCadastroInicial(request);
+            var lUsuario = Service.GetAllList();
+
+            if (lUsuario.Any(x => x.Email == request.Email))
+                validation.LErrors.Add("Email já vinculado a outro usuário");
+
+            if (validation.IsValid())
+            {
+
+                var usuario = Mapper.Map<Usuario>(request);
+
+                //Hash da senha
+                usuario.Senha = new HashCripytograph().Hash(request.Senha);
+                var cadastro = Service.CadastrarComRetorno(usuario);
+
+            }
+
+            return validation;
+        }
 
 
         public ValidationResult Editar(UsuarioRequest request)
@@ -109,25 +131,18 @@ namespace Application.Controllers
         }
 
 
-        public BaseGridResponse ConsultarGridUsuario(BaseGridRequest request)
+        public BaseGridResponse ConsultarGridUsuario()
         {
             var itens = Service.GetAllQuery();
             
-            itens = itens.AplicarFiltrosDinamicos(request.QueryFilters);
-
             return new BaseGridResponse()
             {
-                Itens = itens.Skip(request.Page * request.Take).Take(request.Take)
-                    .Select(x => new UsuarioGridResponse()
+                Itens = itens.Select(x => new UsuarioGridResponse()
                     {
                         IdUsuario = x.IdUsuario,
                         Nome = x.Nome,
                         Cpf = x.Cpf.ToFormatCpf(),
-                        DataNascimento = x.DataNascimento == null ? null : x.DataNascimento.Value.FormatDateBr(),
-                        Email = x.Email,
-                        Senha = x.Senha,
-                        Telefone = x.Telefone,
-                        Perfil = x.PerfilAdministrador ? "Administrador" : "Comum"
+                        Telefone = x.Telefone.FormatTelefone(),
                     }).ToList(),
 
                 TotalItens = itens.Count()

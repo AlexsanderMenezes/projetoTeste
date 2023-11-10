@@ -40,6 +40,27 @@ namespace teste.Controllers
                 return ResponderErro(e.Message);
             }
         }
+        
+        [HttpPost]
+        //implementar futuro primeiro cadastro
+        [Route("CadastroInicial")]
+        public JsonResult CadastrarInicial(UsuarioRegistroInicialRequest request)
+        {
+            try
+            {
+                var cadastro = App.CadastroInicial(request);
+
+                if (cadastro.IsValid())
+                    return ResponderSucesso("Usuário cadastrado com sucesso!");
+
+                return ResponderErro(cadastro.LErrors.FirstOrDefault());
+
+            }
+            catch (Exception e)
+            {
+                return ResponderErro(e.Message);
+            }
+        }
 
 
         [HttpGet]
@@ -114,14 +135,14 @@ namespace teste.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpGet]
         [Authorize]
         [Route("ConsultarGridUsuario")]
-        public JsonResult ConsultarGridUsuario(UsuarioGridRequest request)
+        public JsonResult ConsultarGridUsuario()
         {
             try
             {
-                var retorno = App.ConsultarGridUsuario(request);
+                var retorno = App.ConsultarGridUsuario();
 
                 return ResponderSucesso(retorno);
             }

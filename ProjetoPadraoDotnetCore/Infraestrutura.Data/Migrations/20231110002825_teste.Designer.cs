@@ -4,14 +4,16 @@ using Infraestrutura.DataBaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infraestrutura.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20231110002825_teste")]
+    partial class teste
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -88,6 +90,10 @@ namespace Infraestrutura.Migrations
 
                     b.Property<string>("Foto")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Genero")
+                        .HasColumnName("Genero")
+                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
                         .IsRequired()

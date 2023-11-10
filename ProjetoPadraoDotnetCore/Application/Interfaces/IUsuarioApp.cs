@@ -15,9 +15,10 @@ namespace Application.Interfaces
          Usuario GetByCpfEmail(string cpf, string email);
          Usuario GetById(int id);
          ValidationResult Cadastrar(UsuarioRequest request);
+         ValidationResult CadastroInicial(UsuarioRegistroInicialRequest request);
          ValidationResult Editar(UsuarioRequest request);
          void DeleteById(int id);
-         BaseGridResponse ConsultarGridUsuario(BaseGridRequest request);
+         BaseGridResponse ConsultarGridUsuario();
          ValidationResult AlterarSenha(UsuarioAlterarSenhaRequest request);
          Usuario GetById(int? id);
 

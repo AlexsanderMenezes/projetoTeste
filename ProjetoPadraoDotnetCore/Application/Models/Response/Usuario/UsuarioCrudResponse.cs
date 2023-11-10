@@ -24,7 +24,6 @@ namespace Application.Models.Response.Usuario
         public string NomePai { get; set; }
         public string Observacao { get; set; }
         public string DataNascimento { get; set; } = null;
-        public string Genero { get; set; }
         public List<SkillRequest> lSkills { get; set; } = null;
     }
 }

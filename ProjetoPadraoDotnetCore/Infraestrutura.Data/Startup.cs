@@ -14,7 +14,7 @@ namespace Infraestrutura
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Context>(o => 
-                o.UseSqlServer(@"Data Source=DESKTOP-0M0JUPL\SQLSA;Initial Catalog=ProjetoPadraoDotnet;User Id=sa;Password=megawere;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"), ServiceLifetime.Transient);
+                o.UseSqlServer("Data Source=DESKTOP-DMHFPQ2;Initial Catalog=ProjetoPadraoDotnet;User Id=sa;Password=sis1010@;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"), ServiceLifetime.Transient);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

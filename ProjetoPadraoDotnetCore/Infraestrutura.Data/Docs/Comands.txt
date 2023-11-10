@@ -8,6 +8,6 @@ dotnet ef migrations remove
 dotnet ef database update
 
 //Desfazer o update no banco
-dotnet ef database drop
+dotnet ef database drop --project Web
 
 

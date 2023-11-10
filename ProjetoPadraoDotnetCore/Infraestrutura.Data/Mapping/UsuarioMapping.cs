@@ -25,13 +25,6 @@ namespace Infraestrutura.Mapping
             builder.Property(t => t.Pais).HasColumnName("Pais");
             builder.Property(t => t.Rua).HasColumnName("Rua");
             builder.Property(t => t.Numero).HasColumnName("Numero");
-            builder.Property(t => t.NomeMae).HasColumnName("NomeMae");
-            builder.Property(t => t.NomePai).HasColumnName("NomePai");
-            builder.Property(t => t.Observacao).HasColumnName("Observacao");
-            builder.Property(t => t.Genero).HasColumnName("Genero");
-            builder.Property(t => t.DataRecuperacaoSenha).HasColumnName("DataRecuperacaoSenha");
-            builder.Property(t => t.TentativasRecuperarSenha).HasColumnName("TentativasRecuperarSenha");
-            builder.Property(t => t.CodigoRecuperarSenha).HasColumnName("CodigoRecuperarSenha");
 
             // builder
             //     .HasOne(t => t.UsuarioFk)
