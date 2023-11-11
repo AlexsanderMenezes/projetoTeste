@@ -18,6 +18,8 @@ namespace Application.Models.Response.Usuario
         public string Rua { get; set; }
         public string Bairro { get; set; }
         public int? Numero { get; set; }
+        public string DataNascimento { get; set; } = null;
+
         public List<SkillRequest> lSkills { get; set; } = null;
     }
 }

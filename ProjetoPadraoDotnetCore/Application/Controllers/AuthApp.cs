@@ -57,7 +57,6 @@ namespace Application.Controllers
                 retorno.Nome = usuario.Nome;
                 retorno.SessionKey = Jwt.GerarToken(usuario.Cpf);
                 retorno.IdUsuario = usuario.IdUsuario;
-                retorno.Foto = usuario.Foto;
                 retorno.Perfil = usuario.PerfilAdministrador;
             }
 

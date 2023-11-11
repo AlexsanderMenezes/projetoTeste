@@ -39,12 +39,10 @@ namespace Application.Validators.Usuario
                 validation.LErrors.Add("Campo Email é obrigatório!");
             if (string.IsNullOrEmpty(request.Nome))
                 validation.LErrors.Add("Campo nome é obrigatório!");
-            if (string.IsNullOrEmpty(request.NomeMae))
-                validation.LErrors.Add("Campo nome da mãe é obrigatório!");
             if (string.IsNullOrEmpty(request.Cpf))
                 validation.LErrors.Add("Campo CPF é obrigatório!");
-            if (!request.DataNascimento.HasValue)
-                validation.LErrors.Add("Campo data de nascimento é obrigatório!");
+            // if (!request.DataNascimento.HasValue)
+            //     validation.LErrors.Add("Campo data de nascimento é obrigatório!");
             if (string.IsNullOrEmpty(request.Cep))
                 validation.LErrors.Add("Campo cep obrigatório!");
             if (string.IsNullOrEmpty(request.Bairro))

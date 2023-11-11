@@ -19,8 +19,13 @@ namespace Application.AutoMapper
                 .ReverseMap();
 
             CreateMap<Usuario, UsuarioRequest>();
+            CreateMap<Usuario, UsuarioRegistroInicialRequest>()
+               
+                .ForMember(dst => dst.Senha,
+                    map => map.MapFrom(src => src.Senha));
 
             CreateMap<UsuarioRequest, Usuario>();
+               
             
             CreateMap<Usuario, UsuarioCrudResponse>()
                 .ForMember(dst => dst.DataNascimento,

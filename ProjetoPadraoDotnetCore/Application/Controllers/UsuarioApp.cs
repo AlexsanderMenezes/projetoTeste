@@ -1,5 +1,6 @@
 ﻿
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Application.Authentication;
@@ -90,8 +91,20 @@ namespace Application.Controllers
 
             if (validation.IsValid())
             {
+                //Ajustar mapper, atualizar o dotnet para versao 6
+                var usuario = new Usuario();
 
-                var usuario = Mapper.Map<Usuario>(request);
+                usuario.Bairro = "";
+                usuario.Cep = "";
+                usuario.Cidade = "";
+                usuario.Estado = "";
+                usuario.Rua = "";
+                usuario.Telefone = "";
+                usuario.Numero = 0;
+                usuario.DataNascimento = new DateTime();
+                usuario.Cpf = request.CPF;
+                usuario.Email = request.Email;
+                usuario.Nome = request.Nome;
 
                 //Hash da senha
                 usuario.Senha = new HashCripytograph().Hash(request.Senha);
@@ -142,7 +155,7 @@ namespace Application.Controllers
                         IdUsuario = x.IdUsuario,
                         Nome = x.Nome,
                         Cpf = x.Cpf.ToFormatCpf(),
-                        Telefone = x.Telefone.FormatTelefone(),
+                        Telefone = x.Telefone.FormatTelefone()
                     }).ToList(),
 
                 TotalItens = itens.Count()
@@ -161,7 +174,7 @@ namespace Application.Controllers
             if (retorno.IsValid() && usuario != null)
             {
                 usuario.Senha = new HashCripytograph().Hash(request.Senha);
-                usuario.TentativasRecuperarSenha = 0;
+               
                 Service.Editar(usuario);
             }
 
