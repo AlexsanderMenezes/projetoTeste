@@ -1,0 +1,82 @@
+<mat-card-content class="container_login">
+
+  <mat-card class="card-login">
+    <mat-card-title>{{cadastro ? 'Cadastrar-se' : 'Login'}}</mat-card-title>
+    <form *ngIf="!cadastro" [formGroup]="formLogin" novalidate>
+
+      <mat-card-content class="conteudo-login">
+
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="EmailLogin" placeholder="Ex. email@example.com">
+          <mat-error *ngIf="formLogin.get('EmailLogin').hasError('EmailLogin') && formLogin.get('email').touched">
+            Por favor informe um email válido
+          </mat-error>
+          <mat-error *ngIf="formLogin.get('EmailLogin').hasError('required') && formLogin.get('EmailLogin').touched">
+            Email é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Senha</mat-label>
+          <input type="password" matInput formControlName="SenhaLogin">
+          <mat-error *ngIf="formLogin.get('SenhaLogin').invalid && formLogin.get('SenhaLogin').touched">Senha é
+            <strong>obrigatória</strong>
+          </mat-error>
+        </mat-form-field>
+
+      </mat-card-content>
+
+    </form>
+
+    <form *ngIf="cadastro" [formGroup]="formCadastro" novalidate>
+
+      <mat-card-content class="conteudo-login">
+
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="Ex. email@example.com">
+          <mat-error *ngIf="formCadastro.get('email').hasError('email') && formCadastro.get('email').touched">
+            Por favor informe um email válido
+          </mat-error>
+          <mat-error *ngIf="formCadastro.get('email').hasError('required') && formCadastro.get('email').touched">
+            Email é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Senha</mat-label>
+          <input type="password" matInput formControlName="senha">
+          <mat-error *ngIf="formCadastro.get('senha').invalid && formCadastro.get('senha').touched">Senha é
+            <strong>obrigatória</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Cpf</mat-label>
+          <input type="text" matInput formControlName="cpf">
+          <mat-error *ngIf="formCadastro.get('cpf').invalid && formCadastro.get('cpf').touched">Cpf é
+            <strong>obrigatória</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field-full">
+          <mat-label>Nome</mat-label>
+          <input type="text" matInput formControlName="nome">
+          <mat-error *ngIf="formCadastro.get('nome').invalid && formCadastro.get('nome').touched">Nome é
+            <strong>obrigatória</strong>
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+    </form>
+    <div class="row">
+      <div class="col-6">
+          <button mat-button color="primary" class="full" (click)="cadastre()">{{cadastro ? 'Login' : 'Cadastrar-se'}}</button>
+      </div>
+      <div *ngIf="!cadastro" class="col-lg-6">
+          <button mat-button color="primary" class="full" (click)="logar()">Entrar</button>
+      </div>
+      <div *ngIf="cadastro" class="col-lg-6">
+        <button mat-button color="primary" class="full" (click)="cadastrese()">Cadastrar</button>
+    </div>
+    </div>
+  </mat-card>
+</mat-card-content>

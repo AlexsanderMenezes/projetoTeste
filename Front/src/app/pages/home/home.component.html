@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <main class="m-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-sm btn-success" (click)="Novo()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Novo Usuário
+                        <i class="bi bi-arrow-right-square"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <table class="table table-bordered border-dark text-center">
+                    <thead>
+                      <tr>
+                        <th scope="col">Ações</th>
+                        <th scope="col">Cód</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">CPF</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of listGridUsuario">
+                        <th scope="row">
+                            <button type="button" class="btn btn-sm btn-info" (click)="Editar(item.idUsuario)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </th>
+                        <td>{{item.idUsuario}}</td>
+                        <td>{{item.nome}}</td>
+                        <td>{{item.telefone}}</td>
+                        <td>{{item.cpf}}</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <mat-card-title class="teste">{{isNew ? 'Novo Usuário' : 'Editar Usuario'}}</mat-card-title>
+            </div>
+            <div class="modal-body">
+              
+                <form [formGroup]="formUsuario" class="form" novalidate>
+                    
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label class="teste">Nome</mat-label>
+                        <input type="text" matInput formControlName="nome" id="nome">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Cpf</mat-label>
+                        <input type="text" matInput formControlName="cpf" id="cpf">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput formControlName="email" id="email">
+                    </mat-form-field>
+                    <mat-form-field *ngIf="isNew" appearance="outline" class="form-field-full">
+                        <mat-label>Senha</mat-label>
+                        <input type="password" matInput formControlName="senha" id="senha">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Telefone</mat-label>
+                        <input type="text" matInput formControlName="telefone" id="telefone">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Cep</mat-label>
+                        <input type="text" matInput formControlName="cep" id="cep">
+                    </mat-form-field> 
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Rua</mat-label>
+                        <input type="text" matInput formControlName="rua" id="rua">
+                    </mat-form-field> 
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Número</mat-label>
+                        <input type="text" matInput formControlName="numero" id="numero">
+                    </mat-form-field> 
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Bairro</mat-label>
+                        <input type="text" matInput formControlName="bairro" id="bairro">
+                    </mat-form-field> 
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Cidade</mat-label>
+                        <input type="text" matInput formControlName="cidade" id="cidade">
+                    </mat-form-field> 
+                    <mat-form-field appearance="outline" class="form-field-full">
+                        <mat-label>Estado</mat-label>
+                        <input type="text" matInput formControlName="estado" id="estado">
+                    </mat-form-field> 
+
+                </form>
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+              <button type="button" class="btn btn-primary" (click)="Salvar()">{{isNew ? 'Salvar' : 'Editar'}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

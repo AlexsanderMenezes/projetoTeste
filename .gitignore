@@ -1,0 +1,11 @@
+﻿Front/node_modules
+ProjetoPadraoDotnetCore/Application/obj
+ProjetoPadraoDotnetCore/CrossCutting/obj
+ProjetoPadraoDotnetCore/Domain/obj
+ProjetoPadraoDotnetCore/Infraestrutura.Data/obj
+ProjetoPadraoDotnetCore/Web/obj
+ProjetoPadraoDotnetCore/Application/obj
+ProjetoPadraoDotnetCore/CrossCutting/obj
+ProjetoPadraoDotnetCore/Domain/obj
+ProjetoPadraoDotnetCore/Infraestrutura.Data/obj
+ProjetoPadraoDotnetCore/Web/obj
